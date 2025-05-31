@@ -1,21 +1,23 @@
 ![Header](./banner.jpg)
+
 <div align="center">
   <picture>
     <source
-      srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=dark&include_all_commits=true&count_private=true"
+      srcset="https://github-readme-stats.vercel.app/api?username=razyanas&show_icons=true&theme=dark&include_all_commits=true&count_private=true&border_color=000000"
       media="(prefers-color-scheme: dark)"
     />
     <source
-      srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&include_all_commits=true&count_private=true"
+      srcset="https://github-readme-stats.vercel.app/api?username=razyanas&show_icons=true&include_all_commits=true&count_private=true&border_color=000000"
       media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
     />
     <img
-      src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=dark&include_all_commits=true&count_private=true"
+      src="https://github-readme-stats.vercel.app/api?username=razyanas&show_icons=true&theme=dark&include_all_commits=true&count_private=true&border_color=000000"
       alt="GitHub stats"
       width="100%"
     />
   </picture>
 </div>
+
 
 
 
