@@ -8,7 +8,7 @@
     srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true"
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
   />
-  <img src="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true" />
+  <img src="https://github-readme-stats.vercel.app/api?username=razyanas&amp;theme=dark&amp;hide_border=false&amp;include_all_commits=true&amp;count_private=true" alt="">
 </picture>
 
 ](https://github-readme-stats.vercel.app/api?username=razyanas&theme=dark&hide_border=false&include_all_commits=true&count_private=true)
