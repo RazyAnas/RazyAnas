@@ -1,5 +1,5 @@
 ![Header](./banner.jpg)
-[<picture>
+<picture>
   <source
     srcset="https://github-readme-stats.vercel.app/api?username=anuraghazra&show_icons=true&theme=dark"
     media="(prefers-color-scheme: dark)"
@@ -11,7 +11,6 @@
   <img src="https://github-readme-stats.vercel.app/api?username=razyanas&amp;theme=dark&amp;hide_border=false&amp;include_all_commits=true&amp;count_private=true" alt="">
 </picture>
 
-](https://github-readme-stats.vercel.app/api?username=razyanas&theme=dark&hide_border=false&include_all_commits=true&count_private=true)
 
 
 <!--
