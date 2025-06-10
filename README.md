@@ -21,7 +21,7 @@
 
 - :computer: &nbsp;Connect with me on **[LinkedIn]**
 
-<br>
+<br><br><br><br><br><br><br><br>
 
 <h2 align="left">🛠 Tools, Languages & Resources</h2>
 <table>
@@ -55,7 +55,7 @@
 </table>
 
 
-<br><br><br><br><br><br>
+<br>
 
 <h2 align="left">📊 Coding Activity</h2>
 
