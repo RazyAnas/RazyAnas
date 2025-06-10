@@ -53,7 +53,7 @@
     </td>
     <td align="center" width="96">
       <a href="https://www.hackerrank.com/anasrazy">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hackerrank/hackerrank-original.svg" width="48" height="48" alt="HackerRank" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" width="48" height="48" alt="HackerRank" />
       </a>
       <br>HackerRank
     </td>
