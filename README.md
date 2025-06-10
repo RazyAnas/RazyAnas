@@ -56,6 +56,14 @@
 > WakaTime stats (auto-updated)
 
 <!--START_SECTION:waka-->
-<!-- WakaTime stats will be inserted here -->
+
+```txt
+From: 03 June 2025 - To: 10 June 2025
+
+Total Time: 4 mins
+
+Java   4 mins          █████████████████████████   100.00 %
+```
+
 <!--END_SECTION:waka-->
 
