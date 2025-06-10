@@ -11,9 +11,7 @@
   <a href="https://github.com/RazyAnas/RazyAnas">
     <img src="https://komarev.com/ghpvc/?username=RazyAnas" alt="page views" />
   </a>
-  <a href="https://www.youtube.com/channel/UCZeubjnoztTC_RP_c4YOuYw">
-    <img alt="YouTube Channel Views" src="https://img.shields.io/youtube/channel/views/UCZeubjnoztTC_RP_c4YOuYw?style=flat&logo=youtube">
-  </a>
+
   <a href="https://github.com/RazyAnas?tab=followers">
     <img alt="GitHub followers" src="https://img.shields.io/github/followers/RazyAnas?style=flat&logo=github">
   </a>
