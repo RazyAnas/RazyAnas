@@ -1,11 +1,12 @@
 ![Header](./banner.jpg)
 
 <h1 align="left" id="razyanas-title">👋 Hello there! I'm Anas Razy</h1>
-<h3 align="left">Just a student exploring Java and coding</h3>
-
 <a href="#Anas">
   <img src="https://raw.githubusercontent.com/RazyAnas/RazyAnas/5f835f9b08ebb0297d835e2c3fc1605bd9042a41/generated/overview.svg" alt="Overview" align="right" />
 </a>
+<h3 align="left">Just a student exploring Java and coding</h3>
+
+
 <p align="left">
   <a href="https://github.com/RazyAnas/RazyAnas">
     <img src="https://komarev.com/ghpvc/?username=RazyAnas" alt="page views" />
