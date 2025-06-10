@@ -41,7 +41,7 @@
     </td>
     <td align="center" width="96">
       <a href="#razyanas-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-white.svg" width="48" height="48" alt="GitHub" />
+        <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" width="48" height="48" alt="GitHub" />
       </a>
       <br>GitHub
     </td>
