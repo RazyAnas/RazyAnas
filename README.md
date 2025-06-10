@@ -16,7 +16,7 @@
 </p>
 
 <a href="#macropower-title">
-  <img src="https://raw.githubusercontent.com/RazyAnas/github-stats-transparent/output/generated/overview.svg" alt="macropower" align="right" />
+  <img src="https://raw.githubusercontent.com/RazyAnas/RazyAnas/5f835f9b08ebb0297d835e2c3fc1605bd9042a41/generated/overview.svg" alt="Overview" align="right" />
 </a>
 
 - 🎓 I’m yet to join a **COllege**
