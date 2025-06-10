@@ -19,11 +19,6 @@
   <img src="https://raw.githubusercontent.com/RazyAnas/RazyAnas/5f835f9b08ebb0297d835e2c3fc1605bd9042a41/generated/overview.svg" alt="Overview" align="right" />
 </a>
 
-- :office: &nbsp;I'm currently working at **[84.51°]**
-- :seedling: &nbsp;I’m currently working on my **[homelab]**
-- :speech_balloon: &nbsp;I like to talk about **K8s** and other **OSS**
-- :book: &nbsp;Learn more about my projects on my **[blog]**
-- :mailbox: &nbsp;Ask me anything on my **[issues page]**
 - :computer: &nbsp;Connect with me on **[LinkedIn]**
 
 <br>
@@ -78,3 +73,10 @@ Java   4 mins          ███████████████████
 
 <!--END_SECTION:waka-->
 
+<!-- links -->
+
+[84.51°]: https://github.com/8451 "84.51° Github Home"
+[issues page]: https://github.com/MacroPower/MacroPower/issues "MacroPower/issues"
+[linkedin]: https://www.linkedin.com/in/anas-razy "Anas Razy LinkedIn"
+[homelab]: https://github.com/MacroPower/homelab "MacroPower/homelab"
+[blog]: https://jacobcolvin.com/posts/ "My Blog"
