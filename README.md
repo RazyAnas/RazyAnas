@@ -1,6 +1,6 @@
 
-<img src="./header.svg" alt="Header Svg" align="left" />
-<img src="https://duolingo-stats-card.vercel.app/api?username=anasrazy" alt="Duolingo Stats" align ="right"/>
+<img src="./header.svg" alt="Header Svg" align="center" />
+<img src="https://duolingo-stats-card.vercel.app/api?username=anasrazy" alt="Duolingo Stats" />
 
 <h1 align="left" id="razyanas-title">👋 Hello there! I'm Anas Razy</h1>
 <a href="#Anas">
