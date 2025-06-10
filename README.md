@@ -19,10 +19,12 @@
   <img src="https://raw.githubusercontent.com/RazyAnas/RazyAnas/5f835f9b08ebb0297d835e2c3fc1605bd9042a41/generated/overview.svg" alt="Overview" align="right" />
 </a>
 
-- 🎓 I’m yet to join a **COllege**
-- 📘 Currently learning **Java**
-- 🧠 Was preparing for **NEET**
-- 🔍 Interested in coding, problem solving, and tech
+- :office: &nbsp;I'm currently working at **[84.51°]**
+- :seedling: &nbsp;I’m currently working on my **[homelab]**
+- :speech_balloon: &nbsp;I like to talk about **K8s** and other **OSS**
+- :book: &nbsp;Learn more about my projects on my **[blog]**
+- :mailbox: &nbsp;Ask me anything on my **[issues page]**
+- :computer: &nbsp;Connect with me on **[LinkedIn]**
 
 <br>
 
