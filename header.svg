@@ -1,245 +1,112 @@
 <svg width="100%" height="360" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <style>
-      /* Base styling for the SVG container, using system fonts */
+      /* Base styling for the SVG container */
       svg {
-        font-family: 'Fira Code', 'Roboto Mono', monospace; /* Primary font with fallbacks */
-        background: #0d1117; /* Overall dark background for the SVG */
+        font-family: 'Fira Code', 'Roboto Mono', monospace;
+        background: transparent; /* Outer background remains transparent */
       }
 
-      /* Styling for the main terminal window background */
-      #terminal-window {
-        fill: #1E1E1E; /* Dark charcoal color mimicking macOS terminal */
-        rx: 10px; /* Rounded corners for the window */
+      /* Styling for the main terminal window background (entire window area) */
+      /* This provides the overall rounded corners and default black background */
+      #terminal-window-overall {
+        fill: #000000; /* Pure black, as seen in the Ubuntu terminal image */
+        rx: 10px; /* Rounded corners for the entire terminal window */
         ry: 10px;
-        stroke: #363636; /* Subtle border for definition */
-        stroke-width: 1px;
+        stroke: none; /* No stroke on the overall window background */
       }
 
-      /* Styling for the macOS window control buttons */
+      /* Styling for the terminal title bar background */
+      /* This rect will sit on top of the overall window background and has no internal rounding */
+      #title-bar-background {
+        fill: #2E2E2E; /* Dark grey for the title bar, matching the image */
+        /* Removed rx/ry here, as the overall window's rx/ry handles the top rounding */
+      }
+
+      /* Styling for the Ubuntu-style window control buttons (background circles) */
       .window-button {
-        cursor: pointer; /* Indicates interactivity */
-        stroke-width: 0; /* No visible stroke */
+        fill: #444444; /* Darker, more subtle button color for Ubuntu */
+        cursor: pointer;
+        stroke-width: 0;
+        r: 9px; /* Even larger radius for buttons */
       }
-      .window-button.red { fill: #FF605C; } /* Close button color (red) */
-      .window-button.yellow { fill: #FFBD44; } /* Minimize button color (yellow) */
-      .window-button.green { fill: #00CA4E; } /* Maximize button color (green) */
 
-      /* Styling for the window title text */
+      /* Styling for the window title text (centered in the title bar) */
       .window-title {
-        fill: #BFBFBF; /* Light gray color for text */
-        font-family: sans-serif; /* Using a generic sans-serif for UI elements */
+        fill: #E0E0E0; /* Light gray text for the title bar */
+        font-family: sans-serif; /* A clean sans-serif font for UI elements */
         font-size: 13px;
-        text-anchor: middle; /* Centers the text horizontally */
+        text-anchor: middle; /* Centered in the title bar */
       }
 
       /* Styling for regular terminal command lines and output */
       .terminal-line {
-        fill: #E0E0E0; /* Light gray text color */
+        fill: #E0E0E0; /* Brighter white for text, consistent with Ubuntu's prompt */
         font-size: 14px;
-        white-space: pre; /* Preserves whitespace, useful for code/terminal output */
-        opacity: 0; /* Hidden by default, revealed by animation */
-      }
-
-      /* Styling for the "hacker" lines during the loading phase */
-      .hacker-line {
-        fill: #00BCD4; /* A light blue for distinction, mimicking data streams */
-        font-size: 12px; /* Slightly smaller font for dense output */
         white-space: pre;
-        opacity: 0; /* Hidden by default, animated to scroll and fade */
+        opacity: 1; /* Always visible */
       }
 
       /* Styling for special information lines (e.g., success messages) */
       .info-line {
-        fill: #4CAF50; /* A vibrant green color for emphasis */
+        fill: #72D276; /* A slightly softer green for emphasis, matching Ubuntu output */
         font-size: 14px;
         white-space: pre;
-        opacity: 0; /* Hidden by default */
+        opacity: 1; /* Always visible */
       }
-
-      /* Styling for the blinking cursor */
-      .blinking-cursor {
-        fill: #E0E0E0; /* Cursor color matches regular terminal text */
-        opacity: 0; /* Hidden by default, animated to appear */
-      }
-
     </style>
-
-    <!-- Clip paths for the typing animation (revealing text character-by-character) -->
-    <!-- Each rect's width animates from 0 to the estimated pixel width of its text -->
-    <clipPath id="clip-text-1">
-      <rect x="20" y="27" width="0" height="20">
-        <animate attributeName="width" from="0" to="90" dur="0.7s" begin="0s" fill="freeze" id="type1_clip" />
-      </rect>
-    </clipPath>
-    <clipPath id="clip-text-2">
-      <rect x="20" y="52" width="0" height="20">
-        <animate attributeName="width" from="0" to="72" dur="0.6s" begin="cursor1_blink.end + 0.3s" fill="freeze" id="type2_clip" />
-      </rect>
-    </clipPath>
-    <clipPath id="clip-text-3">
-      <rect x="20" y="77" width="0" height="20">
-        <animate attributeName="width" from="0" to="110" dur="0.9s" begin="cursor2_blink.end + 0.3s" fill="freeze" id="type3_clip" />
-      </rect>
-    </clipPath>
-    <clipPath id="clip-text-4">
-      <rect x="20" y="102" width="0" height="20">
-        <animate attributeName="width" from="0" to="160" dur="1.3s" begin="cursor3_blink.end + 0.3s" fill="freeze" id="type4_clip" />
-      </rect>
-    </clipPath>
-    <clipPath id="clip-text-5">
-      <rect x="20" y="127" width="0" height="20">
-        <animate attributeName="width" from="0" to="160" dur="1.2s" begin="cursor4_blink.end + 0.3s" fill="freeze" id="type5_clip" />
-      </rect>
-    </clipPath>
-    <clipPath id="clip-text-6">
-      <rect x="20" y="152" width="0" height="20">
-        <animate attributeName="width" from="0" to="80" dur="0.6s" begin="cursor5_blink.end + 0.5s" fill="freeze" id="type6_clip" />
-      </rect>
-    </clipPath>
-
   </defs>
 
-  <!-- Main Terminal Window Background Rectangle -->
-  <rect x="5" y="5" width="790" height="350" id="terminal-window" />
+  <!-- Overall Terminal Window Background (provides rounded corners for the whole window) -->
+  <rect x="5" y="5" width="790" height="350" id="terminal-window-overall" />
 
-  <!-- macOS Style Window Control Buttons -->
-  <circle cx="20" cy="20" r="6" class="window-button red" />
-  <circle cx="40" cy="20" r="6" class="window-button yellow" />
-  <circle cx="60" cy="20" r="6" class="window-button green" />
+  <!-- Title Bar Background (sits on top, creating the distinct title bar color) -->
+  <!-- This rectangle's top corners will be visually rounded by the clipping of #terminal-window-overall -->
+  <rect x="5" y="5" width="790" height="40" id="title-bar-background" />
 
-  <!-- Terminal Window Title Bar Text -->
-  <text x="400" y="24" class="window-title">Terminal — bash</text>
+  <!-- Ubuntu Style Window Control Buttons (Top-Right of the title bar) -->
+  <!-- Each button is a group containing the background circle and the icon path -->
+  <g>
+    <!-- Minimize Button -->
+    <circle cx="720" cy="25" class="window-button" />
+    <path d="M 716 25 h 8" fill="none" stroke="#C0C0C0" stroke-width="2" />
 
-  <!-- Group containing all terminal content (commands, output, info) -->
-  <!-- Translated down slightly to account for the title bar -->
-  <g class="terminal-content" transform="translate(0, 20)">
+    <!-- Maximize Button -->
+    <circle cx="740" cy="25" class="window-button" />
+    <rect x="736" y="21" width="8" height="8" fill="none" stroke="#C0C0C0" stroke-width="2" />
 
-    <!-- Line 1: $ whoami -->
-    <!-- Text uses clip-path for character-by-character reveal -->
-    <text x="20" y="40" class="terminal-line" id="text1" clip-path="url(#clip-text-1)">
-      $ whoami
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0s" fill="freeze" />
-    </text>
-    <!-- Cursor for line 1: Appears, moves with text, blinks, then hides -->
-    <rect x="20" y="27" width="8" height="15" class="blinking-cursor">
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0s" fill="freeze" />
-      <animate attributeName="x" from="20" to="90" dur="type1_clip.dur" begin="type1_clip.begin" fill="freeze" id="cursor1_move_synced" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor1_move_synced.end" fill="freeze" repeatCount="2" id="cursor1_blink" />
-      <set attributeName="opacity" to="0" begin="cursor1_blink.end" />
-    </rect>
+    <!-- Close Button -->
+    <circle cx="760" cy="25" class="window-button" />
+    <path d="M 756 21 L 764 29 M 764 21 L 756 29" fill="none" stroke="#C0C0C0" stroke-width="2" />
+  </g>
+
+  <!-- Terminal Window Title Bar Text (centered in the title bar) -->
+  <text x="400" y="29" class="window-title">anas-razy@anas-razy-Nitro-AN515-43 : ~</text>
+
+  <!-- Group containing all terminal content, shifted down to clear the taller title bar -->
+  <g class="terminal-content" transform="translate(0, 40)">
+
+    <!-- Line 1: The exact prompt from the image, followed by a command -->
+    <text x="20" y="40" class="terminal-line">anas-razy@anas-razy-Nitro-AN515-43 : ~$ whoami</text>
 
     <!-- Line 2: anasrazy -->
-    <text x="20" y="65" class="terminal-line" id="text2" clip-path="url(#clip-text-2)">
-      anasrazy
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type2_clip.begin" fill="freeze" />
-    </text>
-    <rect x="20" y="52" width="8" height="15" class="blinking-cursor">
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor1_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="90" dur="type2_clip.dur" begin="type2_clip.begin" fill="freeze" id="cursor2_move_synced" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor2_move_synced.end" fill="freeze" repeatCount="2" id="cursor2_blink" />
-      <set attributeName="opacity" to="0" begin="cursor2_blink.end" />
-    </rect>
+    <text x="20" y="65" class="terminal-line">anasrazy</text>
 
-    <!-- Line 3: $ cd GitHub -->
-    <text x="20" y="90" class="terminal-line" id="text3" clip-path="url(#clip-text-3)">
-      $ cd GitHub
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type3_clip.begin" fill="freeze" />
-    </text>
-    <rect x="20" y="77" width="8" height="15" class="blinking-cursor">
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor2_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="110" dur="type3_clip.dur" begin="type3_clip.begin" fill="freeze" id="cursor3_move_synced" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor3_move_synced.end" fill="freeze" repeatCount="2" id="cursor3_blink" />
-      <set attributeName="opacity" to="0" begin="cursor3_blink.end" />
-    </rect>
+    <!-- Line 3: Prompt + cd GitHub -->
+    <text x="20" y="90" class="terminal-line">anas-razy@anas-razy-Nitro-AN515-43 : ~$ cd GitHub</text>
 
-    <!-- Line 4: $ touch README.md -->
-    <text x="20" y="115" class="terminal-line" id="text4" clip-path="url(#clip-text-4)">
-      $ touch README.md
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type4_clip.begin" fill="freeze" />
-    </text>
-    <rect x="20" y="102" width="8" height="15" class="blinking-cursor">
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor3_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="160" dur="type4_clip.dur" begin="type4_clip.begin" fill="freeze" id="cursor4_move_synced" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor4_move_synced.end" fill="freeze" repeatCount="2" id="cursor4_blink" />
-      <set attributeName="opacity" to="0" begin="cursor4_blink.end" />
-    </rect>
+    <!-- Line 4: Prompt + touch README.md -->
+    <text x="20" y="115" class="terminal-line">anas-razy@anas-razy-Nitro-AN515-43 : ~$ touch README.md</text>
 
-    <!-- Line 5: $ nano README.md -->
-    <text x="20" y="140" class="terminal-line" id="text5" clip-path="url(#clip-text-5)">
-      $ nano README.md
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type5_clip.begin" fill="freeze" />
-    </text>
-    <rect x="20" y="127" width="8" height="15" class="blinking-cursor">
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor4_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="160" dur="type5_clip.dur" begin="type5_clip.begin" fill="freeze" id="cursor5_move_synced" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor5_move_synced.end" fill="freeze" repeatCount="2" id="cursor5_blink" />
-      <set attributeName="opacity" to="0" begin="cursor5_blink.end" />
-    </rect>
+    <!-- Line 5: Prompt + nano README.md -->
+    <text x="20" y="140" class="terminal-line">anas-razy@anas-razy-Nitro-AN515-43 : ~$ nano README.md</text>
 
-    <!-- Line 6: $ about (new command to trigger the "hacker" loading) -->
-    <text x="20" y="165" class="terminal-line" id="text6" clip-path="url(#clip-text-6)">
-      $ about
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type6_clip.begin" fill="freeze" />
-    </text>
-    <rect x="20" y="152" width="8" height="15" class="blinking-cursor">
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor5_blink.end + 0.5s" fill="freeze" />
-      <animate attributeName="x" from="20" to="80" dur="type6_clip.dur" begin="type6_clip.begin" fill="freeze" id="cursor6_move_synced" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor6_move_synced.end" fill="freeze" repeatCount="2" id="cursor6_blink" />
-      <set attributeName="opacity" to="0" begin="cursor6_blink.end" />
-    </rect>
+    <!-- Line 6: Prompt + about -->
+    <text x="20" y="165" class="terminal-line">anas-razy@anas-razy-Nitro-AN515-43 : ~$ about</text>
 
-    <!-- Hacker loading lines -->
-    <g id="hacker-lines-group">
-      <set attributeName="opacity" to="1" begin="cursor6_blink.end + 0.5s" /> <!-- Make group visible -->
-
-      <!-- Individual hacker lines with rapid fade/scroll animations -->
-      <text x="20" y="190" class="hacker-line" id="hacker1">
-        INIT: Kernel patch 0xCAFE0D.log initiated...
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.5s" fill="freeze" />
-        <animate attributeName="y" values="190;170" dur="0.8s" begin="cursor6_blink.end + 0.5s" fill="freeze" />
-      </text>
-      <text x="20" y="210" class="hacker-line" id="hacker2">
-        DEBUG: Memory allocation (0x7F_A1_B2): OK.
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.6s" fill="freeze" />
-        <animate attributeName="y" values="210;190" dur="0.8s" begin="cursor6_blink.end + 0.6s" fill="freeze" />
-      </text>
-      <text x="20" y="230" class="hacker-line" id="hacker3">
-        PROC: Analyzing incoming data stream...
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.7s" fill="freeze" />
-        <animate attributeName="y" values="230;210" dur="0.8s" begin="cursor6_blink.end + 0.7s" fill="freeze" />
-      </text>
-      <text x="20" y="250" class="hacker-line" id="hacker4">
-        SCAN: Network latency check: PING_ACK.
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.8s" fill="freeze" />
-        <animate attributeName="y" values="250;230" dur="0.8s" begin="cursor6_blink.end + 0.8s" fill="freeze" />
-      </text>
-      <text x="20" y="270" class="hacker-line" id="hacker5">
-        DATA: Extracting profile metadata (JSON_PARSE).
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.9s" fill="freeze" />
-        <animate attributeName="y" values="270;250" dur="0.8s" begin="cursor6_blink.end + 0.9s" fill="freeze" />
-      </text>
-      <text x="20" y="290" class="hacker-line" id="hacker6">
-        COMP: Compiling final summary report...
-        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 1.0s" fill="freeze" />
-        <animate attributeName="y" values="290;270" dur="0.8s" begin="cursor6_blink.end + 1.0s" fill="freeze" />
-      </text>
-      <!-- Hide hacker lines group after a set duration -->
-      <set attributeName="opacity" to="0" begin="cursor6_blink.end + 3s" />
-    </g>
-
-    <!-- Final information lines (appear after hacker sequence) -->
-    <text x="20" y="280" class="info-line" id="info1">
-      👋 Hi, I'm Anas Razy — a developer and NEET aspirant
-      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="cursor6_blink.end + 3.5s" fill="freeze" />
-    </text>
-    <text x="20" y="305" class="info-line" id="info2">
-      🔭 I’m currently working on cool automations &amp; terminal UI
-      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="info1.end + 0.3s" fill="freeze" />
-    </text>
-    <text x="20" y="330" class="info-line" id="info3">
-      📫 Reach me at: github.com/RazyAnas
-      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="info2.end + 0.3s" fill="freeze" />
-    </text>
+    <!-- Final information lines -->
+    <text x="20" y="190" class="info-line">👋 Hi, I'm Anas Razy — a developer and NEET aspirant</text>
+    <text x="20" y="215" class="info-line">🔭 I’m currently working on cool automations &amp; terminal UI</text>
+    <text x="20" y="240" class="info-line">📫 Reach me at: github.com/RazyAnas</text>
   </g>
 </svg>
