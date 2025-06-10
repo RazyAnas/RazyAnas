@@ -59,6 +59,3 @@
 <!-- WakaTime stats will be inserted here -->
 <!--END_SECTION:waka-->
 
-
-
-Want to add Trophies or GitHub Stats too? Just ask.
