@@ -25,7 +25,6 @@
 <br>
 
 <h2 align="left">🛠 Tools & Languages</h2>
-
 <table>
   <tr>
     <td align="center" width="96">
@@ -36,7 +35,13 @@
     </td>
     <td align="center" width="96">
       <a href="#razyanas-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="48" height="48" alt="GitHub" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" width="48" height="48" alt="IntelliJ" />
+      </a>
+      <br>IntelliJ
+    </td>
+    <td align="center" width="96">
+      <a href="#razyanas-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-white.svg" width="48" height="48" alt="GitHub" />
       </a>
       <br>GitHub
     </td>
@@ -48,6 +53,7 @@
     </td>
   </tr>
 </table>
+
 
 <br>
 
