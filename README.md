@@ -1,5 +1,6 @@
 
 <img src="./header.svg" alt="Header Svg" align="center" />
+![Duolingo Stats](https://duolingo-stats-card.vercel.app/api?username={your-duolingo-username})
 
 <h1 align="left" id="razyanas-title">👋 Hello there! I'm Anas Razy</h1>
 <a href="#Anas">
