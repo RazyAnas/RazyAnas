@@ -33,12 +33,20 @@
         text-anchor: middle; /* Centers the text horizontally */
       }
 
-      /* Styling for regular terminal command lines */
+      /* Styling for regular terminal command lines and output */
       .terminal-line {
         fill: #E0E0E0; /* Light gray text color */
         font-size: 14px;
         white-space: pre; /* Preserves whitespace, useful for code/terminal output */
-        opacity: 0; /* Hidden by default, animated to appear */
+        opacity: 0; /* Hidden by default, revealed by animation */
+      }
+
+      /* Styling for the "hacker" lines during the loading phase */
+      .hacker-line {
+        fill: #00BCD4; /* A light blue for distinction, mimicking data streams */
+        font-size: 12px; /* Slightly smaller font for dense output */
+        white-space: pre;
+        opacity: 0; /* Hidden by default, animated to scroll and fade */
       }
 
       /* Styling for special information lines (e.g., success messages) */
@@ -56,6 +64,40 @@
       }
 
     </style>
+
+    <!-- Clip paths for the typing animation (revealing text character-by-character) -->
+    <!-- Each rect's width animates from 0 to the estimated pixel width of its text -->
+    <clipPath id="clip-text-1">
+      <rect x="20" y="27" width="0" height="20">
+        <animate attributeName="width" from="0" to="90" dur="0.7s" begin="0s" fill="freeze" id="type1_clip" />
+      </rect>
+    </clipPath>
+    <clipPath id="clip-text-2">
+      <rect x="20" y="52" width="0" height="20">
+        <animate attributeName="width" from="0" to="72" dur="0.6s" begin="cursor1_blink.end + 0.3s" fill="freeze" id="type2_clip" />
+      </rect>
+    </clipPath>
+    <clipPath id="clip-text-3">
+      <rect x="20" y="77" width="0" height="20">
+        <animate attributeName="width" from="0" to="110" dur="0.9s" begin="cursor2_blink.end + 0.3s" fill="freeze" id="type3_clip" />
+      </rect>
+    </clipPath>
+    <clipPath id="clip-text-4">
+      <rect x="20" y="102" width="0" height="20">
+        <animate attributeName="width" from="0" to="160" dur="1.3s" begin="cursor3_blink.end + 0.3s" fill="freeze" id="type4_clip" />
+      </rect>
+    </clipPath>
+    <clipPath id="clip-text-5">
+      <rect x="20" y="127" width="0" height="20">
+        <animate attributeName="width" from="0" to="160" dur="1.2s" begin="cursor4_blink.end + 0.3s" fill="freeze" id="type5_clip" />
+      </rect>
+    </clipPath>
+    <clipPath id="clip-text-6">
+      <rect x="20" y="152" width="0" height="20">
+        <animate attributeName="width" from="0" to="80" dur="0.6s" begin="cursor5_blink.end + 0.5s" fill="freeze" id="type6_clip" />
+      </rect>
+    </clipPath>
+
   </defs>
 
   <!-- Main Terminal Window Background Rectangle -->
@@ -74,131 +116,130 @@
   <g class="terminal-content" transform="translate(0, 20)">
 
     <!-- Line 1: $ whoami -->
-    <!-- Cursor for line 1: Appears, moves, blinks, then hides -->
+    <!-- Text uses clip-path for character-by-character reveal -->
+    <text x="20" y="40" class="terminal-line" id="text1" clip-path="url(#clip-text-1)">
+      $ whoami
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0s" fill="freeze" />
+    </text>
+    <!-- Cursor for line 1: Appears, moves with text, blinks, then hides -->
     <rect x="20" y="27" width="8" height="15" class="blinking-cursor">
       <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="0s" fill="freeze" />
-      <animate attributeName="x" from="20" to="90" dur="0.5s" begin="0s" fill="freeze" id="cursor1_move" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor1_move.end" fill="freeze" repeatCount="2" id="cursor1_blink" />
+      <animate attributeName="x" from="20" to="90" dur="type1_clip.dur" begin="type1_clip.begin" fill="freeze" id="cursor1_move_synced" />
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor1_move_synced.end" fill="freeze" repeatCount="2" id="cursor1_blink" />
       <set attributeName="opacity" to="0" begin="cursor1_blink.end" />
     </rect>
-    <!-- Text for line 1: Appears quickly after cursor finishes "typing" -->
-    <text x="20" y="40" class="terminal-line" id="text1">
-      $ whoami
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor1_move.end" fill="freeze" />
-    </text>
 
     <!-- Line 2: anasrazy -->
-    <!-- Cursor for line 2 -->
+    <text x="20" y="65" class="terminal-line" id="text2" clip-path="url(#clip-text-2)">
+      anasrazy
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type2_clip.begin" fill="freeze" />
+    </text>
     <rect x="20" y="52" width="8" height="15" class="blinking-cursor">
       <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor1_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="90" dur="0.5s" begin="cursor1_blink.end + 0.3s" fill="freeze" id="cursor2_move" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor2_move.end" fill="freeze" repeatCount="2" id="cursor2_blink" />
+      <animate attributeName="x" from="20" to="90" dur="type2_clip.dur" begin="type2_clip.begin" fill="freeze" id="cursor2_move_synced" />
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor2_move_synced.end" fill="freeze" repeatCount="2" id="cursor2_blink" />
       <set attributeName="opacity" to="0" begin="cursor2_blink.end" />
     </rect>
-    <!-- Text for line 2 -->
-    <text x="20" y="65" class="terminal-line" id="text2">
-      anasrazy
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor2_move.end" fill="freeze" />
-    </text>
 
     <!-- Line 3: $ cd GitHub -->
-    <!-- Cursor for line 3 -->
+    <text x="20" y="90" class="terminal-line" id="text3" clip-path="url(#clip-text-3)">
+      $ cd GitHub
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type3_clip.begin" fill="freeze" />
+    </text>
     <rect x="20" y="77" width="8" height="15" class="blinking-cursor">
       <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor2_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="110" dur="0.7s" begin="cursor2_blink.end + 0.3s" fill="freeze" id="cursor3_move" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor3_move.end" fill="freeze" repeatCount="2" id="cursor3_blink" />
+      <animate attributeName="x" from="20" to="110" dur="type3_clip.dur" begin="type3_clip.begin" fill="freeze" id="cursor3_move_synced" />
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor3_move_synced.end" fill="freeze" repeatCount="2" id="cursor3_blink" />
       <set attributeName="opacity" to="0" begin="cursor3_blink.end" />
     </rect>
-    <!-- Text for line 3 -->
-    <text x="20" y="90" class="terminal-line" id="text3">
-      $ cd GitHub
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor3_move.end" fill="freeze" />
-    </text>
 
     <!-- Line 4: $ touch README.md -->
-    <!-- Cursor for line 4 -->
+    <text x="20" y="115" class="terminal-line" id="text4" clip-path="url(#clip-text-4)">
+      $ touch README.md
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type4_clip.begin" fill="freeze" />
+    </text>
     <rect x="20" y="102" width="8" height="15" class="blinking-cursor">
       <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor3_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="160" dur="1.2s" begin="cursor3_blink.end + 0.3s" fill="freeze" id="cursor4_move" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor4_move.end" fill="freeze" repeatCount="2" id="cursor4_blink" />
+      <animate attributeName="x" from="20" to="160" dur="type4_clip.dur" begin="type4_clip.begin" fill="freeze" id="cursor4_move_synced" />
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor4_move_synced.end" fill="freeze" repeatCount="2" id="cursor4_blink" />
       <set attributeName="opacity" to="0" begin="cursor4_blink.end" />
     </rect>
-    <!-- Text for line 4 -->
-    <text x="20" y="115" class="terminal-line" id="text4">
-      $ touch README.md
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor4_move.end" fill="freeze" />
-    </text>
 
     <!-- Line 5: $ nano README.md -->
-    <!-- Cursor for line 5 -->
+    <text x="20" y="140" class="terminal-line" id="text5" clip-path="url(#clip-text-5)">
+      $ nano README.md
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type5_clip.begin" fill="freeze" />
+    </text>
     <rect x="20" y="127" width="8" height="15" class="blinking-cursor">
       <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor4_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="160" dur="1.1s" begin="cursor4_blink.end + 0.3s" fill="freeze" id="cursor5_move" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor5_move.end" fill="freeze" repeatCount="2" id="cursor5_blink" />
+      <animate attributeName="x" from="20" to="160" dur="type5_clip.dur" begin="type5_clip.begin" fill="freeze" id="cursor5_move_synced" />
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor5_move_synced.end" fill="freeze" repeatCount="2" id="cursor5_blink" />
       <set attributeName="opacity" to="0" begin="cursor5_blink.end" />
     </rect>
-    <!-- Text for line 5 -->
-    <text x="20" y="140" class="terminal-line" id="text5">
-      $ nano README.md
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor5_move.end" fill="freeze" />
-    </text>
 
-    <!-- Hacker loading flood - Line 6: Loading progress bar -->
-    <!-- Cursor for line 6 -->
-    <rect x="20" y="157" width="8" height="15" class="blinking-cursor">
+    <!-- Line 6: $ about (new command to trigger the "hacker" loading) -->
+    <text x="20" y="165" class="terminal-line" id="text6" clip-path="url(#clip-text-6)">
+      $ about
+      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="type6_clip.begin" fill="freeze" />
+    </text>
+    <rect x="20" y="152" width="8" height="15" class="blinking-cursor">
       <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor5_blink.end + 0.5s" fill="freeze" />
-      <animate attributeName="x" from="20" to="190" dur="1.2s" begin="cursor5_blink.end + 0.5s" fill="freeze" id="cursor6_move" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor6_move.end" fill="freeze" repeatCount="2" id="cursor6_blink" />
+      <animate attributeName="x" from="20" to="80" dur="type6_clip.dur" begin="type6_clip.begin" fill="freeze" id="cursor6_move_synced" />
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor6_move_synced.end" fill="freeze" repeatCount="2" id="cursor6_blink" />
       <set attributeName="opacity" to="0" begin="cursor6_blink.end" />
     </rect>
-    <!-- Text for line 6 -->
-    <text x="20" y="170" class="terminal-line" id="text6">
-      Loading ███░░░░░░░░░░
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor6_move.end" fill="freeze" />
-    </text>
 
-    <!-- Remaining loading lines (simple fade-in, no typing cursor as these are output) -->
-    <text x="20" y="190" class="terminal-line" id="text7">
-      Fetching public keys...
-      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="text6.end + 0.3s" fill="freeze" />
-    </text>
+    <!-- Hacker loading lines -->
+    <g id="hacker-lines-group">
+      <set attributeName="opacity" to="1" begin="cursor6_blink.end + 0.5s" /> <!-- Make group visible -->
 
-    <text x="20" y="210" class="terminal-line" id="text8">
-      Cloning repositories...
-      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="text7.end + 0.3s" fill="freeze" />
-    </text>
+      <!-- Individual hacker lines with rapid fade/scroll animations -->
+      <text x="20" y="190" class="hacker-line" id="hacker1">
+        INIT: Kernel patch 0xCAFE0D.log initiated...
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.5s" fill="freeze" />
+        <animate attributeName="y" values="190;170" dur="0.8s" begin="cursor6_blink.end + 0.5s" fill="freeze" />
+      </text>
+      <text x="20" y="210" class="hacker-line" id="hacker2">
+        DEBUG: Memory allocation (0x7F_A1_B2): OK.
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.6s" fill="freeze" />
+        <animate attributeName="y" values="210;190" dur="0.8s" begin="cursor6_blink.end + 0.6s" fill="freeze" />
+      </text>
+      <text x="20" y="230" class="hacker-line" id="hacker3">
+        PROC: Analyzing incoming data stream...
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.7s" fill="freeze" />
+        <animate attributeName="y" values="230;210" dur="0.8s" begin="cursor6_blink.end + 0.7s" fill="freeze" />
+      </text>
+      <text x="20" y="250" class="hacker-line" id="hacker4">
+        SCAN: Network latency check: PING_ACK.
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.8s" fill="freeze" />
+        <animate attributeName="y" values="250;230" dur="0.8s" begin="cursor6_blink.end + 0.8s" fill="freeze" />
+      </text>
+      <text x="20" y="270" class="hacker-line" id="hacker5">
+        DATA: Extracting profile metadata (JSON_PARSE).
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 0.9s" fill="freeze" />
+        <animate attributeName="y" values="270;250" dur="0.8s" begin="cursor6_blink.end + 0.9s" fill="freeze" />
+      </text>
+      <text x="20" y="290" class="hacker-line" id="hacker6">
+        COMP: Compiling final summary report...
+        <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.8;1" dur="0.8s" begin="cursor6_blink.end + 1.0s" fill="freeze" />
+        <animate attributeName="y" values="290;270" dur="0.8s" begin="cursor6_blink.end + 1.0s" fill="freeze" />
+      </text>
+      <!-- Hide hacker lines group after a set duration -->
+      <set attributeName="opacity" to="0" begin="cursor6_blink.end + 3s" />
+    </g>
 
-    <text x="20" y="230" class="terminal-line" id="text9">
-      Analyzing commits...
-      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="text8.end + 0.3s" fill="freeze" />
-    </text>
-
-    <!-- Line 10: Compiling profile progress bar -->
-    <!-- Cursor for line 10 -->
-    <rect x="20" y="237" width="8" height="15" class="blinking-cursor">
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="text9.end + 0.5s" fill="freeze" />
-      <animate attributeName="x" from="20" to="210" dur="1.2s" begin="text9.end + 0.5s" fill="freeze" id="cursor10_move" />
-      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor10_move.end" fill="freeze" repeatCount="2" id="cursor10_blink" />
-      <set attributeName="opacity" to="0" begin="cursor10_blink.end" />
-    </rect>
-    <!-- Text for line 10 -->
-    <text x="20" y="250" class="terminal-line" id="text10">
-      Compiling profile ████████
-      <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor10_move.end" fill="freeze" />
-    </text>
-
-    <!-- Final information lines (fade-in, no typing cursor) -->
+    <!-- Final information lines (appear after hacker sequence) -->
     <text x="20" y="280" class="info-line" id="info1">
       👋 Hi, I'm Anas Razy — a developer and NEET aspirant
-      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="cursor10_blink.end + 0.5s" fill="freeze" />
+      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="cursor6_blink.end + 3.5s" fill="freeze" />
     </text>
     <text x="20" y="305" class="info-line" id="info2">
       🔭 I’m currently working on cool automations &amp; terminal UI
-      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="info1.end + 0.3s" fill="freeze" />
+      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="info1.end + 0.3s" fill="freeze" />
     </text>
     <text x="20" y="330" class="info-line" id="info3">
       📫 Reach me at: github.com/RazyAnas
-      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="info2.end + 0.3s" fill="freeze" />
+      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="info2.end + 0.3s" fill="freeze" />
     </text>
   </g>
 </svg>
