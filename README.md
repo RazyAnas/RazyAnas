@@ -15,7 +15,7 @@
   </a>
 </p>
 
-<a href="#macropower-title">
+<a href="#Anas">
   <img src="https://raw.githubusercontent.com/RazyAnas/RazyAnas/5f835f9b08ebb0297d835e2c3fc1605bd9042a41/generated/overview.svg" alt="Overview" align="right" />
 </a>
 
@@ -53,9 +53,11 @@
 
   </tr>
 </table>
+<a href="#title">
+  <img src="https://raw.githubusercontent.com/RazyAnas/RazyAnas/4470c3982514cf992134f5f4d3a7b74ada6d0be5/generated/languages.svg" alt="Languages" align="right" />
+</a>
 
-
-<br>
+<br><br><br><br><br><br><br>
 
 <h2 align="left">📊 Coding Activity</h2>
 
