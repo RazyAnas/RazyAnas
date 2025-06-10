@@ -1,4 +1,5 @@
-![Header](./header.svg)
+
+<img src="./header.svg" alt="Header Svg" align="center" />
 
 <h1 align="left" id="razyanas-title">👋 Hello there! I'm Anas Razy</h1>
 <a href="#Anas">
