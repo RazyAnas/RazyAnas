@@ -119,7 +119,7 @@
     <!-- Cursor for line 4 -->
     <rect x="20" y="102" width="8" height="15" class="blinking-cursor">
       <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor3_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="160" dur="1.0s" begin="cursor3_blink.end + 0.3s" fill="freeze" id="cursor4_move" />
+      <animate attributeName="x" from="20" to="160" dur="1.2s" begin="cursor3_blink.end + 0.3s" fill="freeze" id="cursor4_move" />
       <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor4_move.end" fill="freeze" repeatCount="2" id="cursor4_blink" />
       <set attributeName="opacity" to="0" begin="cursor4_blink.end" />
     </rect>
@@ -133,7 +133,7 @@
     <!-- Cursor for line 5 -->
     <rect x="20" y="127" width="8" height="15" class="blinking-cursor">
       <animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="cursor4_blink.end + 0.3s" fill="freeze" />
-      <animate attributeName="x" from="20" to="160" dur="1.0s" begin="cursor4_blink.end + 0.3s" fill="freeze" id="cursor5_move" />
+      <animate attributeName="x" from="20" to="160" dur="1.1s" begin="cursor4_blink.end + 0.3s" fill="freeze" id="cursor5_move" />
       <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="0.6s" begin="cursor5_move.end" fill="freeze" repeatCount="2" id="cursor5_blink" />
       <set attributeName="opacity" to="0" begin="cursor5_blink.end" />
     </rect>
@@ -190,15 +190,15 @@
     <!-- Final information lines (fade-in, no typing cursor) -->
     <text x="20" y="280" class="info-line" id="info1">
       👋 Hi, I'm Anas Razy — a developer and NEET aspirant
-      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="cursor10_blink.end + 0.5s" fill="freeze" />
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="cursor10_blink.end + 0.5s" fill="freeze" />
     </text>
     <text x="20" y="305" class="info-line" id="info2">
-      🔭 I’m currently working on cool automations & terminal UI
-      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="info1.end + 0.3s" fill="freeze" />
+      🔭 I’m currently working on cool automations &amp; terminal UI
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="info1.end + 0.3s" fill="freeze" />
     </text>
     <text x="20" y="330" class="info-line" id="info3">
       📫 Reach me at: github.com/RazyAnas
-      <animate attributeName="opacity" from="0" to="1" dur="0.8s" begin="info2.end + 0.3s" fill="freeze" />
+      <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="info2.end + 0.3s" fill="freeze" />
     </text>
   </g>
 </svg>
