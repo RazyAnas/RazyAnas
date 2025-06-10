@@ -50,12 +50,12 @@
       </a>
       <br>HackerRank
     </td>
-
+    <a href="#title">
+      <img src="https://raw.githubusercontent.com/RazyAnas/RazyAnas/4470c3982514cf992134f5f4d3a7b74ada6d0be5/generated/languages.svg" alt="Languages" align="right" />
+    </a>
   </tr>
 </table>
-<a href="#title">
-  <img src="https://raw.githubusercontent.com/RazyAnas/RazyAnas/4470c3982514cf992134f5f4d3a7b74ada6d0be5/generated/languages.svg" alt="Languages" align="right" />
-</a>
+
 
 <br><br><br><br><br><br><br>
 
