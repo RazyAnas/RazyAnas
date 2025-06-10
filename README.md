@@ -57,7 +57,7 @@
 </table>
 
 
-<br><br><br><br><br><br><br>
+<br><br><br><br>
 
 <h2 align="left">📊 Coding Activity</h2>
 
