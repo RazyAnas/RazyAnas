@@ -24,7 +24,7 @@
 
 <br>
 
-<h2 align="left">🛠 Tools & Languages</h2>
+<h2 align="left">🛠 Tools, Languages & Resources</h2>
 <table>
   <tr>
     <td align="center" width="96">
@@ -51,6 +51,13 @@
       </a>
       <br>VS Code
     </td>
+    <td align="center" width="96">
+      <a href="https://www.hackerrank.com/anasrazy">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hackerrank/hackerrank-original.svg" width="48" height="48" alt="HackerRank" />
+      </a>
+      <br>HackerRank
+    </td>
+
   </tr>
 </table>
 
