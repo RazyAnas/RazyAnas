@@ -74,7 +74,8 @@ Java   5 hrs 44 mins   ███████████████████
 ```
 
 <!--END_SECTION:waka-->
-<img src="https://wakatime.com/share/@dedc2223-1ebf-48ac-9909-1b3b9059c420/204950e7-a824-4cad-ad2e-bdea99f48796.svg" alt="Graph" align="center" height="150px"/>
+<img src="https://wakatime.com/share/@dedc2223-1ebf-48ac-9909-1b3b9059c420/204950e7-a824-4cad-ad2e-bdea99f48796.svg" alt="Graph" align="center" style="height:150px;"/>
+
 <!-- links -->
 
 [84.51°]: https://github.com/8451 "84.51° Github Home"
