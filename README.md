@@ -74,7 +74,7 @@ Java   5 hrs 44 mins   ███████████████████
 ```
 
 <!--END_SECTION:waka-->
-<img src="https://wakatime.com/share/@dedc2223-1ebf-48ac-9909-1b3b9059c420/204950e7-a824-4cad-ad2e-bdea99f48796.svg" alt="Graph" align="center" style="height:150px;"/>
+<img src="https://wakatime.com/share/@dedc2223-1ebf-48ac-9909-1b3b9059c420/e2f265d3-90d5-45b4-b2f3-8265c3817122.svg" alt="Graph" align="right" style="height:150px;"/>
 
 <!-- links -->
 
