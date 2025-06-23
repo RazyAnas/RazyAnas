@@ -24,6 +24,9 @@
 <br><br><br><br>
 
 <h2 align="left">🛠 Tools, Languages & Resources</h2>
+    <a href="#title">
+      <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/languages.svg" alt="Languages" align="right" />
+    </a>
 <table>
   <tr>
     <td align="center" width="96">
@@ -50,16 +53,12 @@
       </a>
       <br>HackerRank
     </td>
-  <br>
     <td align="center" width="96">
       <a href="https://wakatime.com/@anasrazy">
         <img src="https://images.seeklogo.com/logo-png/27/1/wakatime-logo-png_seeklogo-274073.png" width="48" height="48" alt="WakaTime" />
       </a>
       <br>Waka Time
     </td>
-    <a href="#title">
-      <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/languages.svg" alt="Languages" align="right" />
-    </a>
   </tr>
 </table>
 
