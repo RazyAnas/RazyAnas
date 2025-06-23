@@ -55,7 +55,7 @@
     </td>
     <td align="center" width="96">
       <a href="https://wakatime.com/@anasrazy">
-        <img src="https://images.seeklogo.com/logo-png/27/1/wakatime-logo-png_seeklogo-274073.png" width="48" height="48" alt="WakaTime" />
+        <a href="https://imgbb.com/"><img src="https://i.ibb.co/VWqmGfks/wakatime-logo-png-seeklogo-274073.png" alt="wakatime-logo-png-seeklogo-274073" border="0"></a>
       </a>
       <br>Waka Time
     </td>
