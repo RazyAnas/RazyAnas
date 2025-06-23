@@ -26,7 +26,7 @@
 <h2 align="left">🛠 Tools, Languages & Resources</h2>
     <a href="#title">
       <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/languages.svg" alt="Languages" align="center" />
-    </a>
+    
 <table align="right">
   <tr>
     <td align="center" width="96">
@@ -61,7 +61,7 @@
     </td>
   </tr>
 </table>
-
+</a>
 
 <br><br><br><br>
 
