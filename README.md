@@ -27,7 +27,7 @@
     <a href="#title">
       <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/languages.svg" alt="Languages" align="left" />
     </a>
-<table align="right">
+<table >
   <tr>
     <td align="center" width="96">
       <a href="#razyanas-tech">
