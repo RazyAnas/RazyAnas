@@ -25,7 +25,7 @@
 
 <h2 align="left">🛠 Tools, Languages & Resources</h2>
     <a href="#title">
-      <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/languages.svg" alt="Languages" align="right" />
+      <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/languages.svg" alt="Languages" align="center" />
     </a>
 <table>
   <tr>
