@@ -27,6 +27,9 @@
     <a href="#title">
       <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/languages.svg" alt="Languages" align="left" />
     </a>
+    <a href="#title">
+      <img src=" https://dark-fog-894a.backuprazy7292.workers.dev/streak.svg" alt="Languages" align="left" />
+    </a>
 <table >
   <tr>
     <td align="center" width="96">
