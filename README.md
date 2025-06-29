@@ -2,11 +2,11 @@
 <img src="./banner.jpg" alt="Header Svg" align="center" />
 
 <h1 align="left" id="razyanas-title">>>> anas@github:~$ echo "👋 Hello there! I'm Anas Razy"</h1>
+
+<h3 align="left">Just a student exploring Java and coding</h3>
 <a href="#Anas">
   <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/overview.svg" alt="Overview" align="right" />
 </a>
-<h3 align="left">Just a student exploring Java and coding</h3>
-
 
 <p align="left">
   <a href="https://github.com/RazyAnas/RazyAnas">
