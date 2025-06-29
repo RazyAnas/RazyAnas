@@ -2,7 +2,6 @@
 <img src="./banner.jpg" alt="Header Svg" align="center" />
 
 <h1 align="left" id="razyanas-title">>>> anas@github:~$ echo "👋 Hello there! I'm Anas Razy"</h1>
-<img alt="Gif" src="https://64.media.tumblr.com/677ea635b42e0a4f3ebc6372f2942d02/tumblr_p3a9k0tc7k1qenrveo1_500.gif">
 <a href="#Anas">
   <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/overview.svg" alt="Overview" align="right" />
 </a>
@@ -85,6 +84,8 @@ Text    0 secs          ░░░░░░░░░░░░░░░░░░�
 <!--END_SECTION:waka-->
 <img src="https://wakatime.com/share/@dedc2223-1ebf-48ac-9909-1b3b9059c420/2badc08b-82d1-402f-99bd-15a3e2c69504.svg" alt="Graph" align="right"/>
 
+<img alt="Gif" src="https://64.media.tumblr.com/677ea635b42e0a4f3ebc6372f2942d02/tumblr_p3a9k0tc7k1qenrveo1_500.gif" align="center">
+
 <!-- links -->
 
 [84.51°]: https://github.com/8451 "84.51° Github Home"
@@ -92,3 +93,5 @@ Text    0 secs          ░░░░░░░░░░░░░░░░░░�
 [linkedin]: https://www.linkedin.com/in/anas-razy "Anas Razy LinkedIn"
 [homelab]: https://github.com/MacroPower/homelab "MacroPower/homelab"
 [blog]: https://jacobcolvin.com/posts/ "My Blog"
+
+
