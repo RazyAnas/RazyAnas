@@ -2,7 +2,7 @@
 <img src="./banner.jpg" alt="Header Svg" align="center" />
 
 <h1 align="left" id="razyanas-title">>>> anas@github:~$ echo "👋 Hello there! I'm Anas Razy"</h1>
-
+<img alt="Gif" src="https://64.media.tumblr.com/677ea635b42e0a4f3ebc6372f2942d02/tumblr_p3a9k0tc7k1qenrveo1_500.gif">
 <a href="#Anas">
   <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/overview.svg" alt="Overview" align="right" />
 </a>
@@ -15,7 +15,7 @@
   </a>
 
   <a href="https://github.com/RazyAnas?tab=followers">
-    <img alt="GitHub followers" src="https://img.shields.io/github/followers/RazyAnas?style=flat&logo=github">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/RazyAnas?style=flat&logo=github"> 
   </a>
 </p>
 
