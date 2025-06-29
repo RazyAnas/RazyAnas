@@ -1,7 +1,8 @@
 
 <img src="./banner.jpg" alt="Header Svg" align="center" />
 
-<h1 align="left" id="razyanas-title">👋 Hello there! I'm Anas Razy</h1>
+<h1 align="left" id="razyanas-title">> anas@github:~$ "👋 Hello there! I'm Anas Razy"</h1>
+
 <a href="#Anas">
   <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/overview.svg" alt="Overview" align="right" />
 </a>
