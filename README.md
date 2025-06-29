@@ -1,7 +1,7 @@
 
 <img src="./banner.jpg" alt="Header Svg" align="center" />
 
-<h1 align="left" id="razyanas-title">> anas@github:~$ "👋 Hello there! I'm Anas Razy"</h1>
+<h1 align="left" id="razyanas-title">>>> anas@github:~$ echo "👋 Hello there! I'm Anas Razy"</h1>
 
 <a href="#Anas">
   <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/overview.svg" alt="Overview" align="right" />
@@ -24,7 +24,7 @@
 
 <br><br><br><br>
 
-<h2 align="left">🛠 Tools, Languages & Resources</h2>
+<h2 align="left">>>> anas@github:~$ echo "🛠 Tools, Languages & Resources"</h2>
     <a href="#title">
       <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/languages.svg" alt="Languages" align="left" />
     </a>
@@ -66,7 +66,7 @@
 
 <br><br><br><br>
 
-<h2 align="left">📊 Coding Activity</h2>
+<h2 align="left">>>> anas@github:~$ echo "📊 Coding Activity>"</h2>
 
 > WakaTime stats (auto-updated)
 
