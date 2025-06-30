@@ -21,7 +21,7 @@
 
 - :computer: &nbsp;Connect with me on **[LinkedIn]**
 
-<br><br><br><br>
+<br><br><br><br><br><br><br>
 
 <h2 align="left">>>> anas@github:~$ echo "🛠 Tools, Languages & Resources"</h2>
     <a href="#title">
