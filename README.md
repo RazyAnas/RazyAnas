@@ -1,7 +1,7 @@
 
 <img src="./banner.jpg" alt="Header Svg" align="center" />
 
-<h1 align="left" id="razyanas-title">>>> anas@github:~$ echo "👋 Hello there! I'm Anas Razy"</h1>
+<h2 align="left" id="razyanas-title">>>> anas@github:~$ echo "👋 Hello there! I'm Anas Razy"</h2>
 
 <h3 align="left">Just a student exploring Java and coding</h3>
 <a href="#Anas">
