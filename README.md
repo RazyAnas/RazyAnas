@@ -84,9 +84,13 @@ CLASS         0 secs          ░░░░░░░░░░░░░░░░�
 ```
 
 <!--END_SECTION:waka-->
+
+> Click to view more details
+<a href="https://wakatime.com/share/@dedc2223-1ebf-48ac-9909-1b3b9059c420/2badc08b-82d1-402f-99bd-15a3e2c69504.svg">
 <p align="center">
 <img src="https://wakatime.com/share/@dedc2223-1ebf-48ac-9909-1b3b9059c420/2badc08b-82d1-402f-99bd-15a3e2c69504.svg" alt="Graph" width="100%"/>
 </p>
+</a>
 
 <!-- links -->
 
