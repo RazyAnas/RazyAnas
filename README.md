@@ -67,7 +67,7 @@
 
 <h2 align="left">>> anas@github:~$ echo "📊 Coding Activity>"</h2>
 
-> WakaTime stats (auto-updated)
+> Coding stats (auto-updated)
 
 <!--START_SECTION:waka-->
 
