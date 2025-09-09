@@ -72,13 +72,13 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 09 June 2025 - To: 06 September 2025
+From: 09 June 2025 - To: 08 September 2025
 
-Total Time: 182 hrs 14 mins
+Total Time: 182 hrs 31 mins
 
-Java          181 hrs 5 mins  █████████████████████████   99.35 %
+Java          181 hrs 7 mins  ████████████████████████▓   99.22 %
 Text          42 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.39 %
-Python        15 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.14 %
+Python        29 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.27 %
 Image (svg)   8 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.07 %
 Markdown      2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.03 %
 ```
