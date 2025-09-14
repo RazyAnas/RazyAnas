@@ -59,6 +59,13 @@
       </a>
       <br>Waka Time
     </td>
+    <td align="center" width="96">
+  <a href="https://leetcode.com/anasrazy/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="leetcode-logo" width="48" height="48" border="0">
+  </a>
+  <br>LeetCode
+</td>
+
   </tr>
 </table>
 
