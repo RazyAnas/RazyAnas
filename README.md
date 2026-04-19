@@ -4,7 +4,7 @@
 
 <h3 align="left">Just a student exploring Java and coding</h3>
 <a href="#Anas">
-  <img src="https://raw.githubusercontent.com/razyanas/razyanas/output/generated/overview.svg" alt="Overview" align="right" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=razyanas&theme=dark&hide_border=true" alt="Overview" align="right" />
 </a>
 
 <p align="left">
