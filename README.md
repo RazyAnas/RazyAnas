@@ -2,7 +2,7 @@
 
 <h2 align="left" id="razyanas-title">>> anas@github:~$ echo "👋 Hello there! I'm Anas Razy"</h2>
 
-<h3 align="left">Just a student exploring Java and coding</h3>
+<h3 align="left">Exploring UI/UX and Machine Learning</h3>
 <a href="#Anas">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=razyanas&theme=dark&hide_border=true" alt="Overview" align="right" />
 </a>
