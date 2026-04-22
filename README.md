@@ -92,10 +92,14 @@ HTML              2 hrs 9 mins          ▒░░░░░░░░░░░░�
 <!--END_SECTION:waka-->
 
 > Click below to view more details
-<a href="https://wakatime.com/@anasrazy">
 <p align="center">
-<img src="https://wakatime.com/share/@anasrazy/ca100591-dd45-4660-9c41-33bca8f24fce.svg" alt="Header Svg" align="center"/>
+  <a href="https://wakatime.com/@anasrazy">
+    <img 
+      src="https://wakatime.com/share/@anasrazy/ca100591-dd45-4660-9c41-33bca8f24fce.svg" 
+      alt="WakaTime Stats"
+      width="100%"
+    />
+  </a>
 </p>
-</a>
 
 <!-- links -->
