@@ -28,24 +28,31 @@
     </a>
 <table >
   <tr>
+     <td align="center" width="96">
+  <a href="https://leetcode.com/anasrazy/">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="leetcode-logo" width="48" height="48" border="0">
+  </a>
+  <br>LeetCode
+</td>
     <td align="center" width="96">
       <a href="https://www.hackerrank.com/anasrazy">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" width="48" height="48" alt="HackerRank" />
       </a>
       <br>HackerRank
     </td>
-    <td align="center" width="96">
-      <a href="https://wakatime.com/@anasrazy">
-        <img src="https://i.ibb.co/VWqmGfks/wakatime-logo-png-seeklogo-274073.png" alt="wakatime-logo-png-seeklogo-274073" border="0">
-      </a>
-      <br>Waka Time
-    </td>
-    <td align="center" width="96">
-  <a href="https://leetcode.com/anasrazy/">
+     <td align="center" width="96">
+  <a href="https://codolio.com/profile/anasrazy/card">
     <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="leetcode-logo" width="48" height="48" border="0">
   </a>
   <br>LeetCode
 </td>
+    <td align="center" width="96">
+      <a href="https://wakatime.com/@anasrazy">
+        <img src="https://codolio-pt.vercel.app/codolio_assets/gif-owl-transparent.GIF" alt="codolio" border="0">
+      </a>
+      <br>Waka Time
+    </td>
+   
 
   </tr>
 </table>
