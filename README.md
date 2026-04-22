@@ -40,19 +40,18 @@
       </a>
       <br>HackerRank
     </td>
-     <td align="center" width="96">
-  <a href="https://codolio.com/profile/anasrazy/card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="leetcode-logo" width="48" height="48" border="0">
-  </a>
-  <br>LeetCode
-</td>
     <td align="center" width="96">
-      <a href="https://wakatime.com/@anasrazy">
+      <a href="https://codolio.com/profile/anasrazy/card">
         <img src="https://codolio-pt.vercel.app/codolio_assets/gif-owl-transparent.GIF" alt="codolio" border="0">
       </a>
       <br>Codolio
     </td>
-   
+       <td align="center" width="96">
+      <a href="https://www.kaggle.com/anasrazy">
+        <img src="https://images.icon-icons.com/2699/PNG/512/kaggle_logo_icon_168473.png" alt="kaggle" border="0">
+      </a>
+      <br>Kaggle
+    </td>
 
   </tr>
 </table>
