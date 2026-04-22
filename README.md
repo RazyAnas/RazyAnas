@@ -90,7 +90,7 @@ HTML              2 hrs 9 mins          ▒░░░░░░░░░░░░�
 ```
 
 <!--END_SECTION:waka-->
-
+<figure><embed src="https://wakatime.com/share/@anasrazy/ca100591-dd45-4660-9c41-33bca8f24fce.svg"></embed></figure>
 > Click below to view more details
 <a href="https://wakatime.com/share/@anasrazy">
 <p align="center">
