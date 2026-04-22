@@ -94,7 +94,7 @@ HTML              2 hrs 9 mins          ▒░░░░░░░░░░░░�
 > Click below to view more details
 <a href="https://wakatime.com/@anasrazy">
 <p align="center">
-<img src="https://wakatime.com/share/@anasrazy/ca100591-dd45-4660-9c41-33bca8f24fce.svg" alt="Graph" align="center"/>
+<img src="https://wakatime.com/share/@anasrazy/ca100591-dd45-4660-9c41-33bca8f24fce.svg" alt="Header Svg" align="center"/>
 </p>
 </a>
 
