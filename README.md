@@ -50,7 +50,7 @@
       <a href="https://wakatime.com/@anasrazy">
         <img src="https://codolio-pt.vercel.app/codolio_assets/gif-owl-transparent.GIF" alt="codolio" border="0">
       </a>
-      <br>Waka Time
+      <br>Codolio
     </td>
    
 
