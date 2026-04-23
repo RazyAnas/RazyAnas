@@ -1,6 +1,6 @@
 <img src="./banner.jpg" alt="Header Svg" align="center" />
 
-<h2 align="left" id="razyanas-title">>> anas@github:~$ echo "👋 Hello there! I'm Anas Razy"</h2>
+<h2 align="left" id="razyanas-title">>> 𝚊𝚗𝚊𝚜@𝚐𝚒𝚝𝚑𝚞𝚋:~$ 𝚎𝚌𝚑𝚘 "👋 𝙷𝚎𝚕𝚕𝚘 𝚝𝚑𝚎𝚛𝚎! 𝙸'𝚖 𝙰𝚗𝚊𝚜 𝚁𝚊𝚣𝚢"</h2>
 
 <h3 align="left">Exploring UI/UX and Machine Learning</h3>
 <a href="#Anas">
@@ -22,7 +22,7 @@
 
 <br><br><br><br><br><br><br>
 
-<h2 align="left">>> anas@github:~$ echo "🛠 Tools, Languages & Resources"</h2>
+<h2 align="left">>> 𝚊𝚗𝚊𝚜@𝚐𝚒𝚝𝚑𝚞𝚋:~$ 𝚎𝚌𝚑𝚘 "🛠 𝚃𝚘𝚘𝚕𝚜, 𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎𝚜 & 𝚁𝚎𝚜𝚘𝚞𝚛𝚌𝚎𝚜"</h2>
     <a href="#title">
       <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=razyanas&theme=dark&show_icons=true&hide_border=true&layout=compact" alt="Languages" align="left" />
     </a>
@@ -59,7 +59,7 @@
 
 <br><br><br><br>
 
-<h2 align="left">>> anas@github:~$ echo "📊 Coding Activity>"</h2>
+<h2 align="left">>> 𝚊𝚗𝚊𝚜@𝚐𝚒𝚝𝚑𝚞𝚋:~$ 𝚎𝚌𝚑𝚘 "📊 𝙲𝚘𝚍𝚒𝚗𝚐 𝙰𝚌𝚝𝚒𝚟𝚒𝚝𝚢"</h2>
 
 > Coding stats (auto-updated)
 
