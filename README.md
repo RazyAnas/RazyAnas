@@ -1,4 +1,4 @@
-<img src="./banner.jpg" alt="Header Svg" align="center" />
+<img src="./banner.jpg" alt="Header Svg" align="center"/>
 
 <h2 align="left" id="razyanas-title">>> 𝚊𝚗𝚊𝚜@𝚐𝚒𝚝𝚑𝚞𝚋:~$ 𝚎𝚌𝚑𝚘 "𝙷𝚎𝚕𝚕𝚘 𝚝𝚑𝚎𝚛𝚎! 𝙸'𝚖 𝙰𝚗𝚊𝚜 𝚁𝚊𝚣𝚢"</h2>
 
