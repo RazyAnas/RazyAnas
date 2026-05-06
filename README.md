@@ -24,7 +24,7 @@
 
 <h2 align="left">>> 𝚊𝚗𝚊𝚜@𝚐𝚒𝚝𝚑𝚞𝚋:~$ 𝚎𝚌𝚑𝚘 "𝚃𝚘𝚘𝚕𝚜, 𝙻𝚊𝚗𝚐𝚞𝚊𝚐𝚎𝚜 & 𝚁𝚎𝚜𝚘𝚞𝚛𝚌𝚎𝚜"</h2>
     <a href="#title">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=razyanas&theme=dark&show_icons=true&hide_border=true&layout=compact" alt="Languages" align="left" />
+      <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=razyanas&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" alt="Languages" align="left" />
     </a>
 <table >
   <tr>
