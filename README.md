@@ -92,5 +92,23 @@ JSON              2 hrs 56 mins         ▒░░░░░░░░░░░░�
 
 <!-- links -->
 <!-- BLOG-POST-LIST:START -->
-_No blog posts yet — check back soon!_
+
+## 📰 Latest Blog Posts
+
+> Auto-updated daily · Published on [Medium](https://medium.com/@anasrazy)
+
+<br>
+
+<table><tr><td valign="top" width="70">
+<img src="https://cdn-images-1.medium.com/max/1024/1*EW51FrVwrYcPPxdmCuQwTg.jpeg" width="60" height="60" style="border-radius:6px;object-fit:cover;" align="left" />
+</td><td valign="top">
+**[Matplotlib: A Comprehensive Guide to Data Visualization with Python](https://anasrazy.medium.com/matplotlib-a-comprehensive-guide-to-data-visualization-with-python-c5597c141f18?source=rss-f191b889ea84------2)** · `May 17, 2026`<br>
+Part 1: Everything you need to know to start plotting in Python.Fig: matplotlib cheatsheet (source: matplotlib.org)🔜…
+</td></tr></table>
+
+
+---
+
+_🔔 Want more? Follow me on [Medium →](https://medium.com/@anasrazy)_
+
 <!-- BLOG-POST-LIST:END -->
