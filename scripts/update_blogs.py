@@ -72,6 +72,12 @@ def extract_description(entry) -> str:
     return clean
 
 
+def clean_medium_link(url: str) -> str:
+    """Strip RSS tracking params from Medium URLs so they look clean."""
+    # Remove everything from '?' onward (e.g. ?source=rss-...)
+    return url.split("?")[0]
+
+
 def fetch_posts(url: str, limit: int) -> list[dict]:
     feed = feedparser.parse(url)
 
@@ -92,7 +98,7 @@ def fetch_posts(url: str, limit: int) -> list[dict]:
         posts.append(
             {
                 "title":       entry.title.strip(),
-                "link":        entry.link.strip(),
+                "link":        clean_medium_link(entry.link.strip()),  # ← clean URL
                 "published":   published,
                 "thumbnail":   extract_thumbnail(entry),
                 "description": extract_description(entry),
@@ -124,9 +130,9 @@ def build_markdown(posts: list[dict]) -> str:
     lines.append("")
 
     for post in posts:
-        title       = post["title"]
+        title       = html.escape(post["title"])   # escape < > & in titles
         link        = post["link"]
-        description = post["description"]
+        description = html.escape(post["description"])
         thumbnail   = post["thumbnail"]
         published   = post["published"]
 
@@ -138,7 +144,6 @@ def build_markdown(posts: list[dict]) -> str:
                 f'align="left" />'
             )
         else:
-            # Fallback: Medium logo placeholder
             img_html = (
                 f'<img src="https://miro.medium.com/v2/resize:fill:{THUMB_SIZE}:{THUMB_SIZE}/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" '
                 f'width="{THUMB_SIZE}" height="{THUMB_SIZE}" '
@@ -146,14 +151,17 @@ def build_markdown(posts: list[dict]) -> str:
                 f'align="left" />'
             )
 
-        date_str = f" · `{published}`" if published else ""
+        # FIX: Use <strong> + <a> instead of **[title](link)**
+        #      Use <sub> for date instead of backtick code syntax
+        #      Both render correctly inside HTML table cells on GitHub
+        date_str = f' &nbsp;<sub>{published}</sub>' if published else ""
 
         block = (
             "<table><tr><td valign=\"top\" width=\"70\">\n"
             f"{img_html}\n"
             "</td><td valign=\"top\">\n"
-            f"**[{title}]({link})**{date_str}<br>\n"
-            f"{description}\n"
+            f"<strong><a href=\"{link}\">{title}</a></strong>{date_str}<br>\n"
+            f"<sub>{description}</sub>\n"
             "</td></tr></table>\n"
         )
 
