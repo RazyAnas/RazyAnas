@@ -6,21 +6,70 @@ into README.md between the sentinel comment tags:
 
     <!-- BLOG-POST-LIST:START -->
     <!-- BLOG-POST-LIST:END -->
+
+Each post renders as:
+    [thumbnail]  Title (linked)
+                 Short description
 """
 
 import sys
 import re
+import html
 import feedparser
 from dateutil import parser as date_parser
 from datetime import timezone
 
-MEDIUM_RSS   = "https://medium.com/feed/@anasrazy"
-README_PATH  = "README.md"
-MAX_POSTS    = 5
-START_TAG    = "<!-- BLOG-POST-LIST:START -->"
-END_TAG      = "<!-- BLOG-POST-LIST:END -->"
+MEDIUM_RSS  = "https://medium.com/feed/@anasrazy"
+README_PATH = "README.md"
+MAX_POSTS   = 5
+START_TAG   = "<!-- BLOG-POST-LIST:START -->"
+END_TAG     = "<!-- BLOG-POST-LIST:END -->"
+THUMB_SIZE  = 60   # px — small square thumbnail
 
-ICONS = ["✦", "✦", "✦", "✦", "✦"]   # one icon per post slot
+
+# ── helpers ──────────────────────────────────────────────────────────────────
+
+def extract_thumbnail(entry) -> str:
+    """Return the best available image URL from an RSS entry, or ''."""
+
+    # 1. media:thumbnail (most common on Medium)
+    if hasattr(entry, "media_thumbnail") and entry.media_thumbnail:
+        return entry.media_thumbnail[0].get("url", "")
+
+    # 2. media:content with medium="image"
+    if hasattr(entry, "media_content"):
+        for m in entry.media_content:
+            if m.get("medium") == "image" or m.get("type", "").startswith("image"):
+                return m.get("url", "")
+
+    # 3. First <img> inside the content / summary HTML
+    content_html = ""
+    if hasattr(entry, "content") and entry.content:
+        content_html = entry.content[0].get("value", "")
+    elif hasattr(entry, "summary"):
+        content_html = entry.summary
+
+    img_match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', content_html)
+    if img_match:
+        return img_match.group(1)
+
+    return ""
+
+
+def extract_description(entry) -> str:
+    """Return a clean plain-text excerpt (~120 chars) from the entry summary."""
+    raw = ""
+    if hasattr(entry, "summary"):
+        raw = entry.summary
+
+    clean = re.sub(r"<[^>]+>", "", raw)
+    clean = html.unescape(clean).strip()
+    clean = re.sub(r"\s+", " ", clean)
+
+    if len(clean) > 120:
+        clean = clean[:117].rsplit(" ", 1)[0] + "…"
+
+    return clean
 
 
 def fetch_posts(url: str, limit: int) -> list[dict]:
@@ -32,7 +81,6 @@ def fetch_posts(url: str, limit: int) -> list[dict]:
 
     posts = []
     for entry in feed.entries[:limit]:
-        # Parse publish date safely
         published = ""
         if hasattr(entry, "published"):
             try:
@@ -43,15 +91,18 @@ def fetch_posts(url: str, limit: int) -> list[dict]:
 
         posts.append(
             {
-                "title":     entry.title,
-                "link":      entry.link,
-                "published": published,
-                "summary":   getattr(entry, "summary_detail", None),
+                "title":       entry.title.strip(),
+                "link":        entry.link.strip(),
+                "published":   published,
+                "thumbnail":   extract_thumbnail(entry),
+                "description": extract_description(entry),
             }
         )
 
     return posts
 
+
+# ── markdown builder ──────────────────────────────────────────────────────────
 
 def build_markdown(posts: list[dict]) -> str:
     if not posts:
@@ -65,23 +116,48 @@ def build_markdown(posts: list[dict]) -> str:
     lines.append("## 📰 Latest Blog Posts")
     lines.append("")
     lines.append(
-        "> Auto-updated daily · Published on [Medium](https://medium.com/@anasrazy)"
+        "> Auto-updated daily · Published on "
+        "[Medium](https://medium.com/@anasrazy)"
     )
     lines.append("")
-    lines.append("---")
+    lines.append("<br>")
     lines.append("")
 
-    for i, post in enumerate(posts):
-        icon      = ICONS[i % len(ICONS)]
-        title     = post["title"].strip()
-        link      = post["link"].strip()
-        published = post["published"]
+    for post in posts:
+        title       = post["title"]
+        link        = post["link"]
+        description = post["description"]
+        thumbnail   = post["thumbnail"]
+        published   = post["published"]
 
-        date_badge = f"`{published}`" if published else ""
+        if thumbnail:
+            img_html = (
+                f'<img src="{thumbnail}" '
+                f'width="{THUMB_SIZE}" height="{THUMB_SIZE}" '
+                f'style="border-radius:6px;object-fit:cover;" '
+                f'align="left" />'
+            )
+        else:
+            # Fallback: Medium logo placeholder
+            img_html = (
+                f'<img src="https://miro.medium.com/v2/resize:fill:{THUMB_SIZE}:{THUMB_SIZE}/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" '
+                f'width="{THUMB_SIZE}" height="{THUMB_SIZE}" '
+                f'style="border-radius:6px;object-fit:cover;" '
+                f'align="left" />'
+            )
 
-        lines.append(f"### {icon} [{title}]({link})")
-        if date_badge:
-            lines.append(f"&nbsp;&nbsp;🗓 {date_badge}")
+        date_str = f" · `{published}`" if published else ""
+
+        block = (
+            "<table><tr><td valign=\"top\" width=\"70\">\n"
+            f"{img_html}\n"
+            "</td><td valign=\"top\">\n"
+            f"**[{title}]({link})**{date_str}<br>\n"
+            f"{description}\n"
+            "</td></tr></table>\n"
+        )
+
+        lines.append(block)
         lines.append("")
 
     lines.append("---")
@@ -95,12 +171,13 @@ def build_markdown(posts: list[dict]) -> str:
     return "\n".join(lines)
 
 
+# ── readme injector ───────────────────────────────────────────────────────────
+
 def inject_into_readme(new_block: str, readme_path: str) -> None:
     try:
         with open(readme_path, "r", encoding="utf-8") as f:
             content = f.read()
     except FileNotFoundError:
-        # If no README exists yet, create a minimal one with the sentinels
         content = (
             "# Hi, I'm Anas 👋\n\n"
             f"{START_TAG}\n{END_TAG}\n"
@@ -114,7 +191,6 @@ def inject_into_readme(new_block: str, readme_path: str) -> None:
     if pattern.search(content):
         updated = pattern.sub(new_block, content)
     else:
-        # Append sentinels if they don't exist yet
         updated = content.rstrip() + "\n\n" + new_block + "\n"
 
     with open(readme_path, "w", encoding="utf-8") as f:
@@ -123,10 +199,15 @@ def inject_into_readme(new_block: str, readme_path: str) -> None:
     print(f"✅  README updated with {MAX_POSTS} blog post(s).")
 
 
+# ── entry point ───────────────────────────────────────────────────────────────
+
 def main() -> None:
     print(f"📡  Fetching RSS from {MEDIUM_RSS} …")
     posts = fetch_posts(MEDIUM_RSS, MAX_POSTS)
     print(f"   Found {len(posts)} post(s).")
+    for p in posts:
+        thumb_status = "✔ thumbnail" if p["thumbnail"] else "✘ no thumbnail"
+        print(f"   • {p['title'][:60]} [{thumb_status}]")
 
     new_block = build_markdown(posts)
     inject_into_readme(new_block, README_PATH)
