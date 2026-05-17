@@ -1,0 +1,40 @@
+name: 📝 Update Medium Blog Posts
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # Runs daily at 06:00 UTC
+  workflow_dispatch:        # Allows manual trigger from GitHub UI
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Fetch & Inject Latest Blogs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set Up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 📦 Install Dependencies
+        run: pip install feedparser python-dateutil
+
+      - name: 🔄 Fetch & Update Blog Section
+        run: python scripts/update_blogs.py
+
+      - name: 🚀 Commit & Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: 🤖 auto-update latest Medium blog posts"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          file_pattern: README.md
