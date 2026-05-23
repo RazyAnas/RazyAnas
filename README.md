@@ -107,8 +107,4 @@ JSON              3 hrs 5 mins          ▒░░░░░░░░░░░░�
 </td></tr></table>
 
 
----
-
-_🔔 Want more? Follow me on [Medium →](https://medium.com/@anasrazy)_
-
 <!-- BLOG-POST-LIST:END -->
