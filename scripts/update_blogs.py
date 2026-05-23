@@ -168,12 +168,7 @@ def build_markdown(posts: list[dict]) -> str:
         lines.append(block)
         lines.append("")
 
-    lines.append("---")
-    lines.append("")
-    lines.append(
-        "_🔔 Want more? Follow me on [Medium →](https://medium.com/@anasrazy)_"
-    )
-    lines.append("")
+
     lines.append(END_TAG)
 
     return "\n".join(lines)
