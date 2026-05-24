@@ -100,6 +100,14 @@ JSON              3 hrs 5 mins          ▒░░░░░░░░░░░░�
 <br>
 
 <table><tr><td valign="top" width="70">
+<img src="https://cdn-images-1.medium.com/max/894/1*UacXAgtWfFlhye-8y6gsUA.png" width="60" height="60" style="border-radius:6px;object-fit:cover;" align="left" />
+</td><td valign="top">
+<strong><a href="https://anasrazy.medium.com/machine-learning-life-cycle-feature-engineering-ac29bc1d7244">Machine Learning Life Cycle: Feature Engineering</a></strong> &nbsp;<sub>May 24, 2026</sub><br>
+<sub>What, why and how of Feature EngineeringFig: Machine Learning Life CycleLet’s understand Feature Engineering in a…</sub>
+</td></tr></table>
+
+
+<table><tr><td valign="top" width="70">
 <img src="https://cdn-images-1.medium.com/max/1024/1*EW51FrVwrYcPPxdmCuQwTg.jpeg" width="60" height="60" style="border-radius:6px;object-fit:cover;" align="left" />
 </td><td valign="top">
 <strong><a href="https://anasrazy.medium.com/matplotlib-a-comprehensive-guide-to-data-visualization-with-python-c5597c141f18">Matplotlib: A Comprehensive Guide to Data Visualization with Python</a></strong> &nbsp;<sub>May 17, 2026</sub><br>
