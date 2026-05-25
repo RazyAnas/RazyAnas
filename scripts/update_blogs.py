@@ -24,7 +24,7 @@ README_PATH = "README.md"
 MAX_POSTS   = 5
 START_TAG   = "<!-- BLOG-POST-LIST:START -->"
 END_TAG     = "<!-- BLOG-POST-LIST:END -->"
-THUMB_SIZE  = 180   # px — small square thumbnail
+THUMB_SIZE  = 240   # px — small square thumbnail
 
 
 # ── helpers ──────────────────────────────────────────────────────────────────
