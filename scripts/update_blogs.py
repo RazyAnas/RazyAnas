@@ -139,15 +139,15 @@ def build_markdown(posts: list[dict]) -> str:
         if thumbnail:
             img_html = (
                 f'<img src="{thumbnail}" '
-                f'width="{THUMB_SIZE}" height="{THUMB_SIZE}" '
-                f'style="border-radius:6px;object-fit:cover;" '
+                f'width="{THUMB_SIZE}" '
+                f'style="border-radius:6px;" '
                 f'align="left" />'
             )
         else:
             img_html = (
                 f'<img src="https://miro.medium.com/v2/resize:fill:{THUMB_SIZE}:{THUMB_SIZE}/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" '
-                f'width="{THUMB_SIZE}" height="{THUMB_SIZE}" '
-                f'style="border-radius:6px;object-fit:cover;" '
+                f'width="{THUMB_SIZE}" '
+                f'style="border-radius:6px;" '
                 f'align="left" />'
             )
 
