@@ -160,8 +160,8 @@ def build_markdown(posts: list[dict]) -> str:
             "<table><tr><td valign=\"top\" width=\"70\">\n"
             f"{img_html}\n"
             "</td><td valign=\"top\">\n"
-            f"<strong><a href=\"{link}\">{title}</a></strong>{date_str}<br>\n"
-            f"<span style="font-size:14px;">{description}</span>\n"
+            f'<strong style="font-size:20px;"><a href="{link}">{title}</a></strong>{date_str}<br>\n'
+            f'<span style="font-size:14px;">{description}</span>\n'
            
             "</td></tr></table>\n"
         )
