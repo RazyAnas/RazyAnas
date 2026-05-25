@@ -7,7 +7,7 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=razyanas&theme=dark&hide_border=true" alt="Overview" align="right" />
 </a>
 
-<p align="left">
+<p align="left"> 
   <a href="https://github.com/RazyAnas/RazyAnas">
     <img src="https://komarev.com/ghpvc/?username=RazyAnas" alt="page views" />
   </a>
