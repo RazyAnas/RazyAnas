@@ -24,7 +24,7 @@ README_PATH = "README.md"
 MAX_POSTS   = 5
 START_TAG   = "<!-- BLOG-POST-LIST:START -->"
 END_TAG     = "<!-- BLOG-POST-LIST:END -->"
-THUMB_SIZE  = 60   # px — small square thumbnail
+THUMB_SIZE  = 180   # px — small square thumbnail
 
 
 # ── helpers ──────────────────────────────────────────────────────────────────
@@ -161,7 +161,8 @@ def build_markdown(posts: list[dict]) -> str:
             f"{img_html}\n"
             "</td><td valign=\"top\">\n"
             f"<strong><a href=\"{link}\">{title}</a></strong>{date_str}<br>\n"
-            f"<sub>{description}</sub>\n"
+            f"<span style="font-size:14px;">{description}</span>\n"
+           
             "</td></tr></table>\n"
         )
 
