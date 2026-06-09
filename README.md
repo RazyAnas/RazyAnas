@@ -70,15 +70,15 @@
 <table><tr><td valign="top" width="70">
 <img src="https://cdn-images-1.medium.com/max/1024/1*0DiZ64Ddx1gtTXBT9Abk7g.png" width="240" style="border-radius:6px;" align="left" />
 </td><td valign="top">
-<strong style="font-size:20px;"><a href="https://anasrazy.medium.com/linear-regression-with-ols-simple-multiple-regression-4a8a7e35d8ee">Linear Regression with OLS: Simple &amp; Multiple Regression</a></strong> &nbsp;<sub>Jun 08, 2026</sub><br>
-<span style="font-size:14px;">Learn Simple and Multiple Linear Regression through step-by-step OLS derivations and examples.If you’re learning…</span>
+<strong style="font-size:20px;"><a href="https://pub.towardsai.net/linear-regression-with-ols-simple-multiple-regression-4a8a7e35d8ee">Linear Regression with OLS: Simple &amp; Multiple Regression</a></strong> &nbsp;<sub>Jun 08, 2026</sub><br>
+<span style="font-size:14px;">Learn Simple and Multiple Linear Regression through step-by-step OLS derivations with Code.Notes Image by authorIf…</span>
 </td></tr></table>
 
 
 <table><tr><td valign="top" width="70">
 <img src="https://cdn-images-1.medium.com/max/542/0*gB_Ckc0SjZoZpLHl.jpg" width="240" style="border-radius:6px;" align="left" />
 </td><td valign="top">
-<strong style="font-size:20px;"><a href="https://anasrazy.medium.com/i-can-compress-1000-dimensions-into-2-heres-what-pca-taught-me-f45194b8794b">I can compress 1000 Dimensions Into 2 — Here’s What PCA Taught Me</a></strong> &nbsp;<sub>May 31, 2026</sub><br>
+<strong style="font-size:20px;"><a href="https://pub.towardsai.net/i-can-compress-1000-dimensions-into-2-heres-what-pca-taught-me-f45194b8794b">I Can Compress 1000 Dimensions Into 2 — Here’s What PCA Taught Me</a></strong> &nbsp;<sub>May 31, 2026</sub><br>
 <span style="font-size:14px;">Understand what PCA is, how it works, and how to implement it in Python with a real world example“If you can’t…</span>
 </td></tr></table>
 
