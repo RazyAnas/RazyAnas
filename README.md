@@ -68,6 +68,14 @@
 <br>
 
 <table><tr><td valign="top" width="70">
+<img src="https://cdn-images-1.medium.com/max/1024/1*BesickA8wV83YM7DMnDinw.jpeg" width="240" style="border-radius:6px;" align="left" />
+</td><td valign="top">
+<strong style="font-size:20px;"><a href="https://anasrazy.medium.com/india-has-over-60-million-street-dogs-i-couldnt-ignore-that-2affa8292bde">India Has Over 60 Million Street Dogs. I Couldn’t Ignore That…</a></strong> &nbsp;<sub>Jun 22, 2026</sub><br>
+<span style="font-size:14px;">Stree puppy on Indian Roadside via shutterstockThere’s a particular kind of dog you stop noticing after a while.The…</span>
+</td></tr></table>
+
+
+<table><tr><td valign="top" width="70">
 <img src="https://cdn-images-1.medium.com/max/1024/1*0DiZ64Ddx1gtTXBT9Abk7g.png" width="240" style="border-radius:6px;" align="left" />
 </td><td valign="top">
 <strong style="font-size:20px;"><a href="https://pub.towardsai.net/linear-regression-with-ols-simple-multiple-regression-4a8a7e35d8ee">Linear Regression with OLS: Simple &amp; Multiple Regression</a></strong> &nbsp;<sub>Jun 08, 2026</sub><br>
