@@ -68,6 +68,14 @@
 <br>
 
 <table><tr><td valign="top" width="70">
+<img src="https://cdn-images-1.medium.com/max/1000/1*EhXCKp4c_TZNevk_tXyP8Q.jpeg" width="240" style="border-radius:6px;" align="left" />
+</td><td valign="top">
+<strong style="font-size:20px;"><a href="https://anasrazy.medium.com/logistic-regression-the-simplest-explanation-60684188949b">Logistic Regression: The Simplest Explanation</a></strong> &nbsp;<sub>Jul 19, 2026</sub><br>
+<span style="font-size:14px;">Logistic Regression: Simplest ExplanationUnderstand sigmoid function, Maximum Likelihood, and Binary Cross-Entropy…</span>
+</td></tr></table>
+
+
+<table><tr><td valign="top" width="70">
 <img src="https://cdn-images-1.medium.com/max/1024/1*BesickA8wV83YM7DMnDinw.jpeg" width="240" style="border-radius:6px;" align="left" />
 </td><td valign="top">
 <strong style="font-size:20px;"><a href="https://anasrazy.medium.com/india-has-over-60-million-street-dogs-i-couldnt-ignore-that-2affa8292bde">India Has Over 60 Million Street Dogs. I Couldn’t Ignore That…</a></strong> &nbsp;<sub>Jun 22, 2026</sub><br>
@@ -96,14 +104,6 @@
 </td><td valign="top">
 <strong style="font-size:20px;"><a href="https://anasrazy.medium.com/machine-learning-life-cycle-feature-engineering-ac29bc1d7244">Machine Learning Life Cycle: Feature Engineering</a></strong> &nbsp;<sub>May 24, 2026</sub><br>
 <span style="font-size:14px;">What, why and how of Feature EngineeringFig: Machine Learning Life CycleLet’s understand Feature Engineering in a…</span>
-</td></tr></table>
-
-
-<table><tr><td valign="top" width="70">
-<img src="https://cdn-images-1.medium.com/max/1024/1*EW51FrVwrYcPPxdmCuQwTg.jpeg" width="240" style="border-radius:6px;" align="left" />
-</td><td valign="top">
-<strong style="font-size:20px;"><a href="https://anasrazy.medium.com/matplotlib-a-comprehensive-guide-to-data-visualization-with-python-c5597c141f18">Matplotlib: A Comprehensive Guide to Data Visualization with Python</a></strong> &nbsp;<sub>May 17, 2026</sub><br>
-<span style="font-size:14px;">Part 1: Everything you need to know to start plotting in Python.Fig: matplotlib cheatsheet (source: matplotlib.org)🔜…</span>
 </td></tr></table>
 
 
