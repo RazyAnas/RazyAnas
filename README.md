@@ -118,11 +118,11 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 09 June 2025 - To: 02 October 2026
+From: 09 June 2025 - To: 03 October 2026
 
 Total Time: 301 hrs 43 mins
 
-Other             210 hrs 53 mins       ██████████▒░░░░░░░░░░░░░░   41.14 %
+Other             210 hrs 55 mins       ██████████▒░░░░░░░░░░░░░░   41.14 %
 Java              196 hrs 1 min         █████████▓░░░░░░░░░░░░░░░   38.24 %
 TypeScript        40 hrs 4 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.82 %
 Python            20 hrs 42 mins        █░░░░░░░░░░░░░░░░░░░░░░░░   04.04 %
